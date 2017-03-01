@@ -2,7 +2,7 @@ package main
 
 import (
   "fmt"
-  // "github.com/aws/aws-sdk-go/aws"
+  "github.com/aws/aws-sdk-go/aws"
   "github.com/aws/aws-sdk-go/service/s3"
   "github.com/aws/aws-sdk-go/aws/session"
 )
@@ -10,7 +10,7 @@ import (
 
 func main(){
 
-    sess, err := session.NewSession()
+    sess, err := session.NewSession(&aws.Config{Region: aws.String("us-east-1")})
 
     if err != nil {
      fmt.Println(err)
