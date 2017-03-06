@@ -19,8 +19,8 @@ func main(){
     svc := s3.New(sess)
 
     if svc != nil {
-      fmt.Println("got new s3 svc session\n")
+      fmt.Println("We got a new s3 svc session!\n")
     }
 
-    fmt.Println("Bye!")
+    fmt.Println("bye...")
 }
